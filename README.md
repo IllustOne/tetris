@@ -1,11 +1,12 @@
 A Tetris game built in angular as a directive to easily be added to any page.
+The pieces are controlled by the up, down, left, and right keys and can be paused with the space bar.
 
 ```html
 <!DOCTYPE html>
 <head>
-	<link href="tetris.css" type="text/css" rel="stylesheet"/>
-	<script src="angular.min.js"></script>
-	<script src="tetris.js"></script>
+	<link href="https://raw.githubusercontent.com/IllustOne/tetris/master/tetris.css" type="text/css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="https://raw.githubusercontent.com/IllustOne/tetris/master/tetris.js"></script>
 </head>
 <body ng-app="tetris">
 	<div tetris=""></div>
