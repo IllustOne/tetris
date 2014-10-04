@@ -24,7 +24,11 @@
 					callback(x, yIndex, xIndex, array);
 				});
 			});
-		};
+		},
+		LEFT = 37,
+		RIGHT = 39,
+		DOWN = 40,
+		UP = 38;
 	
 	angular.module('tetris', [])
 	.directive('tetris', [function(){
@@ -152,20 +156,20 @@
 							$scope.$apply();
 						}
 						else if(!$scope.paused && !$scope.gameOver){
-							if(event.keyIdentifier === 'Left' && !isCollision($scope.activePiece, -1, 0)){
+							if(event.keyCode === LEFT && !isCollision($scope.activePiece, -1, 0)){
 								$scope.activePiece.left--;
 								$scope.$apply();
 							}
-							else if(event.keyIdentifier === 'Right' && !isCollision($scope.activePiece, 1, 0)){
+							else if(event.keyCode === RIGHT && !isCollision($scope.activePiece, 1, 0)){
 								$scope.activePiece.left++;
 								$scope.$apply();
 							}
-							else if(event.keyIdentifier === 'Down' && !isCollision($scope.activePiece, 0, 1)){
+							else if(event.keyCode === DOWN && !isCollision($scope.activePiece, 0, 1)){
 								$scope.activePiece.top++;
 								$scope.score++;
 								$scope.$apply();
 							}
-							else if(event.keyIdentifier === 'Up' && !isCollision(rotatedPiece = $scope.activePiece.getRotation(), 0, 0)){
+							else if(event.keyCode === UP && !isCollision(rotatedPiece = $scope.activePiece.getRotation(), 0, 0)){
 								$scope.activePiece = rotatedPiece;
 								$scope.$apply();
 							}	
