@@ -4,9 +4,9 @@ The pieces are controlled by the up, down, left, and right keys and can be pause
 ```html
 <!DOCTYPE html>
 <head>
-	<link href="https://raw.githubusercontent.com/IllustOne/tetris/master/tetris.css" type="text/css" rel="stylesheet"/>
+	<link href="tetris.css" type="text/css" rel="stylesheet"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script src="https://raw.githubusercontent.com/IllustOne/tetris/master/tetris.js"></script>
+	<script src="tetris.js"></script>
 </head>
 <body ng-app="tetris">
 	<div tetris=""></div>
